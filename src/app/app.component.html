@@ -16,10 +16,11 @@
   </thead>
 
   <tr *ngFor="let time of tabela | async">
-    <td>{{time.posicao}}</td>
-    <td><img class="escudo" src="{{time.time.escudo}}" alt=""></td>
-    <td>{{time.time.nome_popular}}</td>
-    <td>{{time.pontos}}</td>
+    <td>{{time.overall_league_position}}</td>
+    <td><img class="escudo" src="{{time.team_badge}}" alt=""></td>
+    <td>{{time.team_name}}</td>
+    <td>{{time.overall_league_PTS}}</td>
+
   </tr>
   </table>
 </body>
