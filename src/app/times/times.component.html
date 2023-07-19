@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Times Brasilerão</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>Times Brasilerão</h1>
+  <table class="tabela">
+    <thead>
+      <th>Posição</th>
+      <th>Escudo</th>
+      <th>Time</th>
+      <th>Pontos</th>
+    </thead>
+    <tr class="itens" *ngFor="let time of tabela | async">
+      <td>{{time.overall_league_position}}</td>
+      <td><img class="escudo" src="{{time.team_badge}}" alt=""></td>
+      <td><a href="clube/clube.component.html">{{time.team_name}}</a></td>
+      <td>{{time.overall_league_PTS}}</td>
+    </tr>
+  </table>
+
+</body>
+</html>
