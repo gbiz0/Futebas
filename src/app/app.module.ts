@@ -6,18 +6,24 @@ import { TimesComponent } from './times/times.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { JogadorComponent } from './jogador/jogador.component';
 import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TimesComponent,
     JogadorComponent,
+    PagenotfoundComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     NgxPaginationModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    AppRoutingModule
     ],
   providers: [],
   bootstrap: [AppComponent]

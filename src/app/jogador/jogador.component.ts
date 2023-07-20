@@ -8,8 +8,6 @@ import { JogadorService } from './services/jogador.service';
 })
 export class JogadorComponent implements OnInit{
   artilheiro!: any;
-  public p = 1 ;
-
   ngOnInit(): void {
     this.artilheiro = this.jogadorService.getJogador();
   }
