@@ -3,26 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Times Brasilerão</title>
+  <title>Artilheiros | Futebas</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
   <h1>Artilheiros do Campeonato</h1>
-  <table class="tabela">
+  <table class="table table-hover">
     <thead>
-      <th>Classificação</th>
-      <th>Nome</th>
-      <th>Time</th>
-      <th>Gols</th>
-    </thead>
-    <tr class="itens"  *ngFor="let jogador of artilheiro | async">
-      <td>{{jogador.player_place}}</td>
-      <td>{{jogador.player_name}}</td>
-      <td>{{jogador.team_name}}</td>
-      <td>{{jogador.goals}}</td>
+      <tr>
+        <th scope="col">Classificação</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Time</th>
+        <th scope="col">Gols</th>
     </tr>
+    </thead>
+    <tbody>
+      <tr class="itens"  *ngFor="let jogador of artilheiro | async">
+        <td scope="row">{{jogador.player_place}}</td>
+        <td>{{jogador.player_name}}</td>
+        <td>{{jogador.team_name}}</td>
+        <td scope="row">{{jogador.goals}}</td>
+      </tr>
+    </tbody>
   </table>
 </body>
 </html>
