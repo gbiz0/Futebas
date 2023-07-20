@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
-import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ClubeComponent } from './clube/clube.component';
 import { TimesComponent } from './times/times.component';
+import { JogadorComponent } from './jogador/jogador.component';
 
 const routes: Routes = [
-    {path: 'clube', component: ClubeComponent},
-    {path: 'times', component: TimesComponent}
+    {path: '/times', component: TimesComponent},
+    {path: '/jogador', component: JogadorComponent},
 ];
 
 @NgModule({

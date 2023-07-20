@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TimesService } from './services/times.service';
 
-
 @Component({
   selector: 'app-times',
   templateUrl: './times.component.html',

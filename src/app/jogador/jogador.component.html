@@ -9,20 +9,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Brasilerão - Série A</h1>
+  <h1>Artilheiros do Campeonato</h1>
   <table class="tabela">
     <thead>
-      <th>Posição</th>
-      <th>Escudo</th>
+      <th>Classificação</th>
+      <th>Nome</th>
       <th>Time</th>
-      <th>Pontos</th>
+      <th>Gols</th>
     </thead>
-    <tr class="itens"  *ngFor="let time of tabela | async">
-      <td>{{time.overall_league_position}}</td>
-      <td><img class="escudo" src="{{time.team_badge}}" alt=""></td>
-      <td>{{time.team_name}}</td>
-      <td>{{time.overall_league_PTS}}</td>
+    <tr class="itens"  *ngFor="let jogador of artilheiro | async">
+      <td>{{jogador.player_place}}</td>
+      <td>{{jogador.player_name}}</td>
+      <td>{{jogador.team_name}}</td>
+      <td>{{jogador.goals}}</td>
     </tr>
   </table>
+    <pagination-controls (pageChange)="p = $event" previousLabel="Anterior" nextLabel="Próximo"></pagination-controls>
 </body>
 </html>
